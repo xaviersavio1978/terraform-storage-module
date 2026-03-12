@@ -25,15 +25,16 @@ variable "storage_account_2" {
 variable "resource_group_name" {
   description = "Resource group name."
   type        = string
+  default     = "rg-prod-310"
 }
 
 variable "location" {
   description = "Azure region."
   type        = string
+  default     = "eastus"
 }
 
-variable "account_tier" {
-  description = "Standard/Premium" 
+variable "account_tier" {  description = "Standard/Premium" 
   type        = string
   default     = "Standard"
 }
