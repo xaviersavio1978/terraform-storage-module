@@ -7,35 +7,25 @@ terraform {
   }
 
   backend "remote" {
-    hostname = "app.terraform.io"
-
-    organization = "fph"   # replace me
-
+    hostname     = "app.terraform.io"
+    organization = "fph" # replace me
     workspaces {
-      name = "prod_310"          # your Terraform Cloud workspace name
+      name = "prod_310" # your Terraform Cloud workspace name
     }
   }
 }
 
 provider "azurerm" {
-  features = {}
-}
-
-module "resource_group" {
-  source = "../module/azure_resource_group"
-
-  resource_group_name = var.resource_group_name
-  location            = var.location
-  tags                = var.tags
+  features {}
 }
 
 module "storage_account" {
   source = "../module/azure_storage_account"
 
-  storage_account_name      = var.storage_account_name
-  resource_group_name       = module.resource_group.resource_group_name
-  location                  = var.location
-  account_tier              = var.account_tier
-  account_replication_type  = var.account_replication_type
-  tags                      = var.tags
+  storage_account_name     = var.storage_account_name
+  resource_group_name      = var.resource_group_name
+  location                 = var.location
+  account_tier             = var.account_tier
+  account_replication_type = var.account_replication_type
+  tags                     = var.tags
 }
