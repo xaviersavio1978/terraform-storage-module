@@ -11,6 +11,7 @@ resource "azurerm_storage_account" "storage1" {
     name        = "iac-terraform-storage"
     project     = "terraform-storage-module"
     cost_center = "310"
+    test1       = "test1"
   }
 }
 
