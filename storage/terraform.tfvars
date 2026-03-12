@@ -1,4 +1,4 @@
-storage_account_name          = "myuniquestorageacct001"
+storage_account_name          = "myunixavsavacct001"
 resource_group_name         = "rg-prod-310"
 location                    = "eastus"
 account_tier                = "Standard"
