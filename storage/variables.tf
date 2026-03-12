@@ -34,7 +34,8 @@ variable "location" {
   default     = "eastus"
 }
 
-variable "account_tier" {  description = "Standard/Premium" 
+variable "account_tier" {  
+   description = "Standard/Premium" 
   type        = string
   default     = "Standard"
 }
