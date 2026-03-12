@@ -5,6 +5,12 @@ resource "azurerm_storage_account" "storage1" {
 
   account_tier             = "Standard"
   account_replication_type = "LRS"
-  tags = { iac= "test" }
+  tags = {
+    environment = "prod"
+    owner       = "xavier"
+    name        = "iac-terraform-storage"
+    project     = "terraform-storage-module"
+    cost_center = "310"
+  }
 }
 

@@ -6,4 +6,7 @@ account_replication_type    = "LRS"
 tags = {
   environment = "prod"
   owner       = "xavier"
+  name        = "iac-terraform-storage"
+  project     = "terraform-storage-module"
+  cost_center = "310"
 }
