@@ -1,5 +1,10 @@
 variable "storage_account_name" {
-  description = "Storage account name."
+  description = "Primary storage account name."
+  type        = string
+}
+
+variable "storage_account_name_secondary" {
+  description = "Secondary storage account name."
   type        = string
 }
 
