@@ -22,21 +22,21 @@ provider "azurerm" {
 module "storage_account" {
   source = "../module/azure_storage_account"
 
-  storage_account_name     = var.storage_account_name
-  resource_group_name      = var.resource_group_name
-  location                 = var.location
-  account_tier             = var.account_tier
-  account_replication_type = var.account_replication_type
-  tags                     = var.tags
+  storage_account_name     = var.storage_account_1.name
+  resource_group_name      = var.storage_account_1.resource_group_name
+  location                 = var.storage_account_1.location
+  account_tier             = var.storage_account_1.account_tier
+  account_replication_type = var.storage_account_1.account_replication_type
+  tags                     = var.storage_account_1.tags
 }
 
 module "storage_account_secondary" {
   source = "../module/azure_storage_account"
 
-  storage_account_name     = var.storage_account_name_secondary
-  resource_group_name      = var.resource_group_name
-  location                 = var.location
-  account_tier             = var.account_tier
-  account_replication_type = var.account_replication_type
-  tags = merge(var.tags, { name = "iac-terraform-storage-secondary" })
+  storage_account_name     = var.storage_account_2.name
+  resource_group_name      = var.storage_account_2.resource_group_name
+  location                 = var.storage_account_2.location
+  account_tier             = var.storage_account_2.account_tier
+  account_replication_type = var.storage_account_2.account_replication_type
+  tags                     = var.storage_account_2.tags
 }
