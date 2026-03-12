@@ -26,7 +26,7 @@ variable "account_replication_type" {
 }
 
 variable "tags" {
-  description = "Map of tags."
+  description = "Map of tags. ss"
   type        = map(string)
   default     = {}
 }
