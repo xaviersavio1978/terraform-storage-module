@@ -5,6 +5,16 @@ terraform {
       version = "~> 2.90"
     }
   }
+
+  backend "remote" {
+    hostname = "app.terraform.io"
+
+    organization = "fph"   # replace me
+
+    workspaces {
+      name = "prod_310"          # your Terraform Cloud workspace name
+    }
+  }
 }
 
 provider "azurerm" {
